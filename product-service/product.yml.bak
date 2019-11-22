@@ -103,12 +103,6 @@ spring:
     user:
       name: user
       password: 22222
-  #  配置mq
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    password: guest
-    username: guest
 # admin 配置
 management:
   endpoints:
