@@ -5,6 +5,8 @@ server:
 spring:
   application:
     name: gateway
+  profiles:
+    active: local
 # 配置gateway 转发中心：启用注册中关心转发
   cloud:
     gateway:
