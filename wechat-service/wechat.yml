@@ -7,17 +7,6 @@ server:
     worker-threads: 32
     buffer-size: 1024
     direct-buffers: true
-  servlet:
-    context-path: /wechat
-# 注册到服务注册中心
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:9500/eureka/eureka/
-  instance:
-    prefer-ip-address: true
-    instance-id: ${eureka.instance.ip-address}:${spring.application.name}:${server.port}
-    ip-address: 127.0.0.1
 spring:
   application:
     name: wechat
@@ -138,3 +127,18 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+  #  配置mq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    password: guest
+    username: guest
+# admin 配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

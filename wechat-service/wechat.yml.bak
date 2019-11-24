@@ -22,7 +22,7 @@ spring:
   application:
     name: wechat
   profiles:
-    active: ${profile.active}
+    active: local
   datasource:
     master:
       jdbcUrl: jdbc:mysql://localhost:3306/wechatdb?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
