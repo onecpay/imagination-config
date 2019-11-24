@@ -7,6 +7,12 @@ server:
     worker-threads: 32
     buffer-size: 1024
     direct-buffers: true
+  servlet:
+    context-path: /index
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9500/eureka/eureka/
 spring:
   application:
     name: index
